@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #62ff00, #FFFF00 ,#ffb700);
+            background: linear-gradient(43deg, #4158D0, #C850C0, #FFCC70);
             color: #333;
             margin: 0;
             padding: 0;
@@ -20,7 +20,7 @@
             min-height: 100vh;
         }
         .header {
-            background: linear-gradient(180deg, #1900ff,#1900ff);
+            background: linear-gradient(90deg, #0F3443, #34E89E);
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -34,6 +34,9 @@
             font-weight: 700;
         }
         .header h2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #h2 {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
         .nav {
@@ -50,7 +53,7 @@
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background: linear-gradient(315deg, #00FF00, #87CEEB, #FFFFFF);
+            background-image: linear-gradient( 109.6deg,  rgba(24, 240, 255, 0.841) 11.2%, rgba(241, 162, 255, 0.852) 42%, rgba(255, 53, 225, 0.807) 71.5%, rgb(21, 228, 255) 100.2% );
             color: #333;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-radius: 8px;
@@ -115,27 +118,41 @@
         }
         .para{
             font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #082929;
+            font-size: 2.2vh;
         }
         #para{
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 2.5vh ;
+            color: rgb(0, 0, 0);
         }
         #cc {
             background-color: black;
         }
         #container {
         color: red;
-        font-size: 1.7vh;        }
+        font-size: 1.7vh; 
+               }
+        #tt {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+            font-weight: 700;
+            background: linear-gradient( 179.7deg,  rgba(249,21,215,1) 1.1%, rgba(22,0,98,1) 99% );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
     <script>
         function showSection(section) {
             const homeContent = `
-                <h2>Welcome to <b>XAD SKINS</b></h2>
-                <p class="para">Where your mobile device meets style and protection. Explore our premium collection of skins designed to elevate your device's aesthetic while safeguarding it from everyday wear and tear. Personalize your device with our wide range of designs and materials. Elevate your mobile experience with <b>XAD SKINS</b>.</p>
+                <h2>Welcome to <p id="tt">XAD SKINS</p></h2>
+                <p class="para">Where your mobile device meets style and protection. Explore our premium collection of skins. Elevate your mobile experience with <b>XAD SKINS</b>.</p>
                 <div id="container">
-                <h2>You Can Also Customise Your Own Mobile Skin at Just 60 Rs Only. To Customise Click <a href="https://www.instagram.com/xad.skins/">Contact</a>. 
+                <h2><b>You Can Also Customise Your Own Mobile Skin at Just 60 Rs Only. To Customise Click <a href="https://www.instagram.com/xad.skins/">Contact</a></b></h2> 
                 </div>
-                <h2>Our Products</h2>
+                <h2 id="h2">Our Products</h2>
                 <div class="product">
                     <div class="product-item">
                         <img src="https://xadskins.github.io/1.jpg" alt="Haunted Owl">
