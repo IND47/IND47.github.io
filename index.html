@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XAD SKINS</title>
-    <link   rel="icon"
-            href="https://xadskins.github.io/logo.jpeg"
-            type="image/x-icon"/>
+    <link rel="icon" href="https://xadskins.github.io/logo.jpeg" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -33,7 +31,7 @@
             letter-spacing: 1px;
             font-weight: 700;
         }
-        .header h2{
+        .header h2 {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
         #h2 {
@@ -53,7 +51,7 @@
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-image: linear-gradient( 109.6deg,  rgba(24, 240, 255, 0.841) 11.2%, rgba(241, 162, 255, 0.852) 42%, rgba(255, 53, 225, 0.807) 71.5%, rgb(21, 228, 255) 100.2% );
+            background-image: linear-gradient(109.6deg, rgba(24, 240, 255, 0.841) 11.2%, rgba(241, 162, 255, 0.852) 42%, rgba(255, 53, 225, 0.807) 71.5%, rgb(21, 228, 255) 100.2%);
             color: #333;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-radius: 8px;
@@ -63,6 +61,11 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+        }
+        .product.horizontal .product-item {
+            flex: 1;
+            max-width: none;
+            margin: 10px;
         }
         .product-item {
             background-color: #fff;
@@ -116,36 +119,57 @@
                 width: calc(100% - 20px);
             }
         }
-        .para{
+        .para {
             font-family: Georgia, 'Times New Roman', Times, serif;
             color: #082929;
             font-size: 2.2vh;
         }
-        #para{
+        #para {
             font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 2.5vh ;
+            font-size: 2.5vh;
             color: rgb(0, 0, 0);
         }
         #cc {
             background-color: black;
         }
         #container {
-        color: red;
-        font-size: 1.7vh; 
-               }
+            color: red;
+            font-size: 1.7vh;
+        }
         #tt {
             font-family: 'Playfair Display', serif;
             margin: 0;
             font-size: 1.5em;
             letter-spacing: 1px;
             font-weight: 700;
-            background: linear-gradient( 179.7deg,  rgba(249,21,215,1) 1.1%, rgba(22,0,98,1) 99% );
+            background: linear-gradient(179.7deg, rgba(249,21,215,1) 1.1%, rgba(22,0,98,1) 99%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
     <script>
-        function showSection(section) {
+        function showSection(section, productType = '') {
             const homeContent = `
                 <h2>Welcome to <p id="tt">XAD SKINS</p></h2>
                 <p class="para">Where your mobile device meets style and protection. Explore our premium collection of skins. Elevate your mobile experience with <b>XAD SKINS</b>.</p>
@@ -228,9 +252,10 @@
                     </div>
                 </div>
             `;
+            
             const productsContent = `
-                <h2>Our Products</h2>
-                <div class="product">
+                <div class="product ${productType === 'laptop' ? 'horizontal' : ''}">
+                    ${productType === 'mobile' ? `
                     <div class="product-item">
                         <img src="https://xadskins.github.io/1.jpg" alt="Haunted Owl">
                         <h2>Haunted Owl</h2>
@@ -303,32 +328,47 @@
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
                     </div>
+                    ` : ''}
+                    ${productType === 'laptop' ? `
+                    <div class="product-item">
+                        <img src="https://xadskins.github.io/lap1.jpg" alt="Laptop Skin 1">
+                        <h2>Graffiti 1</h2>
+                        <p>High-quality skin for your laptop.</p>
+                        <p class="price">Price 150.00 Rupee Only/-</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://xadskins.github.io/lap2.jpg" alt="Laptop Skin 2">
+                        <h2>Grafitti 2</h2>
+                        <p>High-quality skin for your laptop.</p>
+                        <p class="price">Price 150.00 Rupee Only/-</p>
+                    </div>
+                    ` : ''}
                 </div>
             `;
+            
             const aboutContent = `
                 <h2>About Us</h2>
-                <p id="para">At <b>XAD SKINS</b>, we're passionate about merging style with functionality. With expertise in the mobile accessory industry, we've honed our craft to provide you with premium quality skins that not only protect your device but also express your unique personality. Our mission is to redefine the way you experience your mobile device, offering a seamless blend of innovation and creativity. Join us on this journey as we continue to push the boundaries of mobile aesthetics.</p>
-                <p><b>Copyright © 2024, XAD SKINS</b>. All rights reserved. Unauthorized reproduction of any content on this site is prohibited.</p>
+                <p class="para">XAD Skins is dedicated to providing high-quality mobile skins that offer style and protection for your devices. Our skins are made from premium materials to ensure durability and a perfect fit.</p>
+                <p class="para">We offer a wide range of designs to suit every taste, and we also provide custom skin options for those who want something truly unique. Our mission is to elevate your mobile experience with our stylish and functional products.</p>
+            `;
+            
+            const contactContent = `
+                <h2>Contact Us</h2>
+                <p class="para">We would love to hear from you! Whether you have a question about our products, need assistance with an order, or just want to give us feedback, please get in touch.</p>
+                <p class="para">Follow us on social media:</p>
+                <ul class="social-media">
+                    <li><a href="https://www.instagram.com/xad.skins" target="_blank">Instagram</a></li>
+                    </ul>
             `;
 
-            let content = '';
-
-            switch(section) {
-                case 'home':
-                    content = homeContent;
-                    break;
-                case 'products':
-                    content = productsContent;
-                    break;
-                case 'about':
-                    content = aboutContent;
-                    break;
-                case 'contact':
-                    window.location.href = 'https://www.instagram.com/xad.skins/';
-                    return;
+            if (section === 'home' && productType) {
+                document.getElementById('container').innerHTML = productsContent;
+            } else {
+                document.getElementById('container').innerHTML = 
+                    section === 'home' ? homeContent :
+                    section === 'about' ? aboutContent :
+                    section === 'contact' ? contactContent : '';
             }
-
-            document.querySelector('.container').innerHTML = content;
         }
 
         window.onload = function() {
@@ -336,21 +376,27 @@
         }
     </script>
 </head>
-<body oncontextmenu="return false;">
-    <div class="header">
-        <h1>XAD SKINS</h1>
+<body>
+    <header class="header">
+        <h1>Welcome To XAD SKINS</h1>
         <div class="nav">
-            <a onclick="showSection('home')">Home</a>
-            <a onclick="showSection('products')">Products</a>
-            <a onclick="showSection('contact')">Contact</a>
-            <a onclick="showSection('about')">About</a>
+            <a href="#" onclick="showSection('home')">Home</a>
+            <div class="dropdown">
+                <a href="#">Products</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('home', 'mobile')">Mobile Skins</a>
+                    <a href="#" onclick="showSection('home', 'laptop')">Laptop Skins</a>
+                </div>
+            </div>
+            <a href="#" onclick="showSection('about')">About</a>
+            <a href="#" onclick="showSection('contact')">Contact</a>
         </div>
+    </header>
+    <div class="container" id="container">
+        <!-- Content will be injected here based on navigation -->
     </div>
-    <div class="container">
-        <!-- Content will be dynamically inserted here -->
-    </div>
-    <div class="footer">
-        <p id="cc">&copy; 2024 XAD SKINS. All rights reserved.</p>
-    </div>
+    <footer class="footer">
+        <p>&copy; 2024 XAD SKINS. All rights reserved.</p>
+    </footer>
 </body>
 </html>
