@@ -167,7 +167,62 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .custom-button {
+            background-color: #4CAF50; /* Green background */
+            border: none;             /* Remove borders */
+            color: white;             /* White text */
+            padding: 15px 32px;       /* Some padding */
+            text-align: center;       /* Center the text */
+            text-decoration: none;    /* Remove underline */
+            display: inline-block;    /* Get it to display inline-block */
+            font-size: 16px;          /* Increase font size */
+            margin: 4px 2px;          /* Add some margin */
+            cursor: pointer;          /* Pointer/hand icon on hover */
+            border-radius: 12px;      /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .custom-button:hover {
+            background-color: #0008ff; /* Darker green on hover */
+        }
+        .btn {
+            background-color: #4800ff; /* Green background */
+            border: none;             /* Remove borders */
+            color: white;             /* White text */
+            padding: 15px 32px;       /* Some padding */
+            text-align: center;       /* Center the text */
+            text-decoration: none;    /* Remove underline */
+            display: inline-block;    /* Get it to display inline-block */
+            font-size: 16px;          /* Increase font size */
+            margin: 4px 2px;          /* Add some margin */
+            cursor: pointer;          /* Pointer/hand icon on hover */
+            border-radius: 12px;      /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        ..btn:hover {
+            background-color: #2600ff; /* Darker green on hover */
+        }
     </style>
+        <script>
+            function copyText(textId) {
+                // Get the text element
+                var textElement = document.getElementById(textId);
+                // Create a temporary textarea element to copy text from
+                var textarea = document.createElement("textarea");
+                textarea.value = textElement.textContent || textElement.innerText;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                alert("Text copied: " + textarea.value);
+            }
+        </script>  
+        <script>
+            function redirectTo(url) {
+                window.location.href = url;
+            }
+        </script>  
     <script>
         function showSection(section, productType = '') {
             const homeContent = `
@@ -183,72 +238,120 @@
                         <h2>Haunted Owl</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text1">XAD01</div>
+                        <button class="btn" onclick="copyText('text1')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/5.jpg" alt="Arcrylic Shades">
                         <h2>Demon</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text2">XAD02</div>
+                        <button class="btn" onclick="copyText('text2')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/14.jpg" alt="Call Of Duty">
                         <h2>Call Of Duty</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
-                    </div>
+                        <p>Product ID</p>
+                        <div id="text3">XAD03</div>
+                        <button class="btn" onclick="copyText('text3')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
+                        </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/5.jpeg" alt="Green Eye Owl">
                         <h2>Green Eye Owl</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text4">XAD04</div>
+                        <button class="btn" onclick="copyText('text4')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/7.jpg" alt="Funkey">
                         <h2>Funkey</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text5">XAD05</div>
+                        <button class="btn" onclick="copyText('text5')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/8.jpg" alt="Pretend">
                         <h2>Pretend</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text6">XAD06</div>
+                        <button class="btn" onclick="copyText('text6')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/9.jpeg" alt="Classy">
                         <h2>Classy</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text7">XAD07</div>
+                        <button class="btn" onclick="copyText('text7')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/10.jpg" alt="Green Owl">
                         <h2>Green Owl</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text8">XAD08</div>
+                        <button class="btn" onclick="copyText('text8')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/11.jpg" alt="Silky Lion">
                         <h2>Silky Lion</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text9">XAD09</div>
+                        <button class="btn" onclick="copyText('text9')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/12.jpg" alt="BGMI">
                         <h2>BGMI</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text10">XAD10</div>
+                        <button class="btn" onclick="copyText('text10')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/13.jpg" alt="Cute Funk">
                         <h2>Cute Funk</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text11">XAD11</div>
+                        <button class="btn" onclick="copyText('text11')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/6.jpg" alt="Clasy Shade">
                         <h2>Clasy Shade</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text12">XAD12</div>
+                        <button class="btn" onclick="copyText('text12')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                 </div>
             `;
@@ -261,72 +364,120 @@
                         <h2>Haunted Owl</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text1">XAD01</div>
+                        <button class="btn" onclick="copyText('text1')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/5.jpg" alt="Arcrylic Shades">
                         <h2>Demon</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text2">XAD02</div>
+                        <button class="btn" onclick="copyText('text2')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/14.jpg" alt="Call Of Duty">
                         <h2>Call Of Duty</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
-                    </div>
+                        <p>Product ID</p>
+                        <div id="text3">XAD03</div>
+                        <button class="btn" onclick="copyText('text3')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
+                        </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/5.jpeg" alt="Green Eye Owl">
                         <h2>Green Eye Owl</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text4">XAD04</div>
+                        <button class="btn" onclick="copyText('text4')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/7.jpg" alt="Funkey">
                         <h2>Funkey</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text5">XAD05</div>
+                        <button class="btn" onclick="copyText('text5')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/8.jpg" alt="Pretend">
                         <h2>Pretend</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text6">XAD06</div>
+                        <button class="btn" onclick="copyText('text6')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/9.jpeg" alt="Classy">
                         <h2>Classy</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text7">XAD07</div>
+                        <button class="btn" onclick="copyText('text7')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/10.jpg" alt="Green Owl">
                         <h2>Green Owl</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text8">XAD08</div>
+                        <button class="btn" onclick="copyText('text8')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/11.jpg" alt="Silky Lion">
                         <h2>Silky Lion</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text9">XAD09</div>
+                        <button class="btn" onclick="copyText('text9')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/12.jpg" alt="BGMI">
                         <h2>BGMI</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text10">XAD10</div>
+                        <button class="btn" onclick="copyText('text10')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/13.jpg" alt="Cute Funk">
                         <h2>Cute Funk</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text11">XAD11</div>
+                        <button class="btn" onclick="copyText('text11')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     <div class="product-item">
                         <img src="https://xadskins.github.io/6.jpg" alt="Clasy Shade">
                         <h2>Clasy Shade</h2>
                         <p>High-quality mobile skin for your smartphone.</p>
                         <p class="price">Price 60.00 Rupee Only/-</p>
+                        <p>Product ID</p>
+                        <div id="text12">XAD12</div>
+                        <button class="btn" onclick="copyText('text12')">Copy Product ID First Then</button>
+                        <br><button class="custom-button" onclick="redirectTo('https://forms.gle/wxvWWnmn31hnV8uN7')">ORDER NOW</button>
                     </div>
                     ` : ''}
                     ${productType === 'laptop' ? `
